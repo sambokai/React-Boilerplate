@@ -4,9 +4,11 @@
   "description": "Trying to understand how react, webpack and babel work together and finding the minimal amount of packages needed for a react project.",
   "author": "Sam Bokai",
   "devDependencies": {
-    "webpack": "^3.11.0"
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server"
   }
 }
