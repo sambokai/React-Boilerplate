@@ -2,6 +2,10 @@
 // https://nodejs.org/api/path.html
 const path = require('path');
 
+// Imports
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+
 // Constants with our paths
 const paths = {
     DIST: path.resolve(__dirname, 'dist'),
@@ -15,8 +19,9 @@ module.exports = {
         path: paths.DIST,
         filename: 'app.bundle.js',
     },
-    //Dev server configuration
-    devServer: {
-        contentBase: paths.SRC,
-    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.join(paths.SRC, 'index.html')
+        }),
+    ]
 };
