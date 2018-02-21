@@ -2,5 +2,11 @@
   "name": "react-webpack-babel-from-scratch",
   "version": "1.0.0",
   "description": "Trying to understand how react, webpack and babel work together and finding the minimal amount of packages needed for a react project.",
-  "author": "Sam Bokai"
+  "author": "Sam Bokai",
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
 }
