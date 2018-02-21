@@ -13,6 +13,7 @@ const paths = {
     SRC: path.resolve(__dirname, 'src'),
 };
 
+//Webpack Configuration
 module.exports = {
     entry: path.join(paths.JS, 'app.js'),
     output: {
@@ -26,7 +27,18 @@ module.exports = {
     ],
     module: {
         rules: [
-            {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
+            {test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader"},
         ]
     },
+
+    // Enable importing JS files without specifying their's extenstion -> ADDED IN THIS STEP
+    //
+    // So we can write:
+    // import MyComponent from './my-component';
+    //
+    // Instead of:
+    // import MyComponent from './my-component.jsx';
+    resolve: {
+        extensions: ['.js', '.jsx']
+    }
 };
