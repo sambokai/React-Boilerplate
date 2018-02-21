@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Trying to understand how react, webpack and babel work together and finding the minimal amount of packages needed for a react project.",
   "author": "Sam Bokai",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
