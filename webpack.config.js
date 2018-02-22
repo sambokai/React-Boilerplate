@@ -8,39 +8,39 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Constants with our paths
 const paths = {
-    DIST: path.resolve(__dirname, 'dist'),
-    JS: path.resolve(__dirname, 'src/js'),
-    SRC: path.resolve(__dirname, 'src'),
+  DIST: path.resolve(__dirname, 'dist'),
+  JS: path.resolve(__dirname, 'src/js'),
+  SRC: path.resolve(__dirname, 'src'),
 };
 
-//Webpack Configuration
+// Webpack Configuration
 module.exports = {
   entry: path.join(paths.JS, 'app.jsx'),
-    output: {
-        path: paths.DIST,
-        filename: 'app.bundle.js',
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.join(paths.SRC, 'index.html')
-        }),
+  output: {
+    path: paths.DIST,
+    filename: 'app.bundle.js',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(paths.SRC, 'index.html'),
+    }),
+  ],
+  module: {
+    rules: [
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'eslint-loader' },
+
     ],
-    module: {
-        rules: [
-            {test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader"},
-            {test: /\.jsx?$/, exclude: /node_modules/, loader: "eslint-loader"},
+  },
 
-        ]
-    },
-
-    // Enable importing JS files without specifying their's extenstion -> ADDED IN THIS STEP
-    //
-    // So we can write:
-    // import MyComponent from './my-component';
-    //
-    // Instead of:
-    // import MyComponent from './my-component.jsx';
-    resolve: {
-        extensions: ['.js', '.jsx']
-    }
+  // Enable importing JS files without specifying their's extenstion -> ADDED IN THIS STEP
+  //
+  // So we can write:
+  // import MyComponent from './my-component';
+  //
+  // Instead of:
+  // import MyComponent from './my-component.jsx';
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };
