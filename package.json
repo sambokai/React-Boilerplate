@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-babel-from-scratch",
+  "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "Trying to understand how react, webpack and babel work together and finding the minimal amount of packages needed for a react project.",
+  "description": "My personal boilerplate for react projects.",
   "author": "Sam Bokai",
   "dependencies": {
     "prop-types": "^15.6.1",
