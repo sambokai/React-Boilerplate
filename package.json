@@ -39,6 +39,14 @@
     "setupTestFrameworkScriptFile": "./test/jest.setup.js",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/jest.setup.js",
+      "!src/index.jsx"
     ]
   }
 }

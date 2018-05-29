@@ -124,3 +124,4 @@ typings/
 
 # End of https://www.gitignore.io/api/node,intellij+all
 /dist/
+/coverage/
