@@ -9,9 +9,11 @@ class Hello extends React.Component {
   }
 
   render() {
+    const { name } = this.state;
+
     return (
       <h3>
-        Hello, {this.state.name}! I am React.
+        Hello, {name}! I am React.
       </h3>
     );
   }
