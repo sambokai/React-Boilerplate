@@ -8,6 +8,7 @@
   },
   "plugins": ["jest"],
   "rules": {
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/jest.setup.js", "**/*.test.{js,jsx}", "**/webpack.*.js"]}]
   }
 }
